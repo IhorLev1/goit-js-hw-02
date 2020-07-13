@@ -1,14 +1,15 @@
 "use strict";
 
+// const formatString = function (string) {
+//   if (string.length > 40) {
+//     string = string.substr(0, 40);
+//     return `${string}...`;
+//   }
+//   return string;
+// };
+
 const formatString = function (string) {
-  const array = string.split("");
-
-  if (array.length > 40) {
-    array.length = 40;
-    return `${array.join("")}...`;
-  }
-
-  return string;
+  return string.length > 40 ? string.substr(0, 40) + "..." : string;
 };
 
 /*

@@ -3,11 +3,10 @@
 const checkForSpam = function (message) {
   const words = ["spam", "sale"];
 
-  if (
-    message.toLowerCase().includes(words[0]) ||
-    message.toLowerCase().includes(words[1])
-  ) {
-    return true;
+  for (let word of words) {
+    if (message.toLowerCase().includes(word)) {
+      return true;
+    }
   }
   return false;
 };
